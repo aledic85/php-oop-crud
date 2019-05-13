@@ -83,13 +83,22 @@
 
         while($row = $result->fetch_assoc()) {
 
-          $strName = $row["name"];
-          $findme = "A";
-          $pos = strpos($strName, $findme);
+          // $strName = $row["name"];
+          // $findme = "A";
+          // $pos = strpos($strName, $findme);
+          //
+          // if ($pos !== false) {
+          //
+          //   $Apaganti[] = new Pagante(
+          //     $row["name"],
+          //     $row["lastname"],
+          //     $row["address"]);
+          // }
 
-          if ($pos !== false) {
+          if ($row["name"][0] == "A") {
 
             $Apaganti[] = new Pagante(
+
               $row["name"],
               $row["lastname"],
               $row["address"]);
